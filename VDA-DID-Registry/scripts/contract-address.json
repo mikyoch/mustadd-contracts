@@ -1,0 +1,8 @@
+{
+  "mumbai": {
+    "date": "2023/05/26",
+    "Proxy": "0xB4d06A229a1Ec62745d5364c3c8ebcE25497Fb49",
+    "ProxyAdmin": "0x6904d533CC5BF3b00dA8c5DFc7D6447309f9b2a8",
+    "Implementation": "0xbB36CBA2Fb16D1b9085C770456346B4c52CcA83B"
+  }
+}

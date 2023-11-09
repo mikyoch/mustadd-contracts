@@ -6,7 +6,7 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/utils/structs/EnumerableSetUpgradeable.sol";
 
 // Verida contract dependencies
-import { EnumerableSet } from "@verida/common-contract/contracts/EnumerableSet.sol";
+import { EnumerableSet } from "./EnumerableSet.sol";
 import "./IVeridaDIDRegistry.sol";
 
 // import "hardhat/console.sol";

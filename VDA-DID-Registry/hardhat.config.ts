@@ -10,8 +10,8 @@ import "@openzeppelin/hardhat-upgrades";
 // For defender
 import "@openzeppelin/hardhat-defender";
 
-dotenv.config({path: __dirname + '/.env'})
-const {PRIVATE_KEY, POLYGONSCAN_API_KEY, POLYGON_TESTNET_RPC, POLYGON_MAINNET_RPC} = process.env;
+dotenv.config({ path: __dirname + '/.env' })
+const { PRIVATE_KEY, POLYGONSCAN_API_KEY, POLYGON_TESTNET_RPC, POLYGON_MAINNET_RPC } = process.env;
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -39,12 +39,12 @@ const config: HardhatUserConfig = {
       chainId: 137,
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
     },
-    polygontestnet: {
+    mumbai: {
       url: POLYGON_TESTNET_RPC !== undefined ? POLYGON_TESTNET_RPC : "https://matic-mumbai.chainstacklabs.com",
       chainId: 80001,
-      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [], 
+      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
       gas: 2100000,
-      gasPrice: 8000000000
+      gasPrice: 80000000000,
     },
     goerli: {
       url: "https://eth-goerli.public.blastapi.io", //https://goerli.infura.io/v3/
@@ -52,13 +52,13 @@ const config: HardhatUserConfig = {
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
     },
   },
-  gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
-    currency: "USD",
-  },
-  etherscan: {
-    apiKey: POLYGONSCAN_API_KEY,
-  },
+  // gasReporter: {
+  //   enabled: process.env.REPORT_GAS !== undefined,
+  //   currency: "USD",
+  // },
+  // etherscan: {
+  //   apiKey: POLYGONSCAN_API_KEY,
+  // },
   mocha: {
     timeout: 0,
   }
